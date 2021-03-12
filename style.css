@@ -1,0 +1,67 @@
+/*
+Theme Name: Emmaus
+Author: Jandrey
+Description: Description.
+Version: 1.3
+*/
+
+ body {
+  background: #0CBBF3 !important;
+}
+
+.menu-emmaus {
+
+}
+
+
+.menu-emmaus .contenedor-botones {
+  width: 30%;
+}
+
+.menu-emmaus .boton-menu {
+  width: 100%;
+  border-radius: 6px;
+}
+
+
+form{
+	width:50%;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#6CC9F8;
+}
+
+form select{
+  border-radius: 10px;
+}
+
+form input{
+  width: 150px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 20%;
+    border-radius: 10px;
+}
+
+form label{
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+.logo{
+  display: block;
+  margin: auto;
+}
+
+ .buscador{
+  border-radius: 6px;
+}
+
+.boton-volver .boton_para_volver{
+  border-radius: 6px;
+}
+
+.btn.btn-sucess {
+  background: #00000000;
+}
