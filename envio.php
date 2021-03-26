@@ -20,6 +20,8 @@ $modelo_promotores = new modelo('promotores');
     $args['datos'] = $_POST;
 
 
+    if ($args['datos']['Nombres'] != '') {
+        $modelo_estudiantes->insertar_wpdb($args, $args['tabla']);
+    }
 
-    $modelo_estudiantes->insertar_wpdb($args, $args['tabla']);
   }

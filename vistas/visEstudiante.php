@@ -5,7 +5,7 @@
 
   <a href="#ident" class="btn btn-sucess" data-toggle="collapse">insertar</a>
   <div id="ident" class="collapse">
-    <form action="/envio.php" class="form-inline" method="post">
+    <form action="" class="form-inline" method="post">
       <input type="hidden" name="tabla" value="estudiantes"/>
       <?php
 
@@ -56,32 +56,22 @@
           <br>
           <div id="respuesta"></div>
 
-      <?php
-      #$informacion = $modelo_estudiantes-> buscador_nombre($nombre , $columnas);
-      #foreach ($columnas as  $nombre_columna)
-      #        {
-      #              <p>
-      #                  <label for="campo2"><?php echo $nombre_columna['COLUMN_NAME'];  </label>
-      #                  <input type="text" id="campo2" name="<?php  echo $nombre_columna['COLUMN_NAME'] " placeholder="<?php $informacion[$nombre_columna] "/>
-      #                </p>
-
-        #          }
-      ?>
       <script>
-        $('#enviar').click(function (){
+        $('#enviar').click(function (e){
+          e.preventDefault();
           var dato = document.getElementById('dato').value;
           var ruta="noms="+dato;
 
-
           $.ajax(
             {
-              url: '<?php site_url('peticion') ?>',
-              type:'POST',
-              data : ruta,
+              "url": 'wp-content/themes/emmauspag/bakend.php',
+              "method":'POST',
+              "data" : ruta
 
           })
           .done(function(res)
           {
+            //muestro la respuesta del servidor
             $('#respuesta').html(res)
           })
           .fail(function(){
