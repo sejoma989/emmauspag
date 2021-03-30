@@ -37,8 +37,7 @@
                      </p>
                     <?php
                   }
-    ?>
-      <input type="hidden" name="tabla" value="estudiantes"/>
+        ?>
       <input type="submit" value="Enviar"/>
     </form>
   </div>
@@ -50,17 +49,19 @@
       <?php
       $columnas = $modelo_estudiantes->columnas_sin_llaves();
       ?>
-          <input  class="buscador" type="text" name="data" id="dato" placeholder="Digite los NOMBRES"/>
-          <button id="enviar" >consultar</button>
-          <br>
-          <br>
+        <form class="formulario_busqueda" method="post">
+          <input  type="hidden" name="tabla" value="estudiantes"/>
+          <input   type="text" name="Nombres"  placeholder="Digite los NOMBRES"/>
+          <input   type="text" name="Apellidos"  placeholder="Digite los APELLIDOS"/>
+          <input  id="Enviar" type="submit" value="consultar"/>
+        </form>
           <div id="respuesta"></div>
-
       <script>
         $('#enviar').click(function (e){
           e.preventDefault();
-          var dato = document.getElementById('dato').value;
-          var ruta="noms="+dato;
+          //var dato = document.getElementById('dato').value;
+          var ruta= $(this).serialize();
+          console.log(ruta)
 
           $.ajax(
             {
