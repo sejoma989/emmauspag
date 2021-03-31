@@ -1,24 +1,6 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset=utf-8>
-  <title>Emmaus</title>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<?php wp_head(); ?>
-</head>
-<body>
-
-  <meta http-equiv="Expires" content="0">
-  <meta http-equiv="Last-Modified" content="0">
-  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-
-  <img src="wp-content/themes/emmauspag/img/LOGOSOLO.png" class="logo">
   <?php
+  get_header();
   require_once "modelo.php";
   require_once 'envio.php';
   require_once 'bakend.php';
@@ -60,7 +42,7 @@
 
   ?>
 
-
+<?php get_footer(); ?>
   </div>
 
 </div>
