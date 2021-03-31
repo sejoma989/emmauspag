@@ -11,4 +11,10 @@
 <?php wp_head(); ?>
 </head>
 <body>
-  <img src="http://localhost/tercero/wordpress/wp-content/uploads/2021/03/LOGOSOLO.png" class="logo">
+  <img src="<?php echo get_template_directory_uri()?>/img/logo.png" class="logo">
+
+<?php
+$url = site_url();
+#print_r($url);
+
+?>
