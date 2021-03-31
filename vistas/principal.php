@@ -1,5 +1,5 @@
 <div class="menu-emmaus">
-
+<?php //print_r(get_template_directory()); ?>
   <div class="contenedor-botones">
     <button class="boton-menu" type="button1" name="button">
       <a href="<?= site_url('/estudiantes'); ?>">ESTUDIANTES</a>
