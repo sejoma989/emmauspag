@@ -11,21 +11,27 @@
 <?php wp_head(); ?>
 </head>
 <body>
-  <img src="http://localhost/tercero/wordpress/wp-content/themes/emmauspag/img/LOGOSOLO.png" class="logo">
-  <?php
 
-  require_once 'bakend.php';
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <img src="wp-content/themes/emmauspag/img/LOGOSOLO.png" class="logo">
+  <?php
+  require_once "modelo.php";
   require_once 'envio.php';
+  require_once 'bakend.php';
+
+
+
     $url =trim($_SERVER['REQUEST_URI'],'/') ;
     $url = explode('/',$url);
 
     if ( array_search('estudiantes', $url) )
     {
       require_once "vistas/visEstudiante.php";
-    } else if (array_search('peticion', $url))
-    {
-      require_once "bakend.php";
-    } else if (array_search('usuarios', $url))
+    }  else if (array_search('usuarios', $url))
     {
       require_once "vistas/usuarios.php";
     }else if (array_search('cursos', $url))

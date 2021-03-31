@@ -14,7 +14,7 @@ class Modelo
       global $wpdb;
       $this->wpdb = $wpdb; # dejamos el wpdb como global dentro de el archivo modelo.php
       $this->nombre_tabla = $N_tabla;
-      $this->get_key_foreaneas();
+      #$this->get_key_foreaneas();
   }
 
   function insertar_wpdb($args)
@@ -79,14 +79,7 @@ class Modelo
            'ARRAY_A'
          );
 
-    if (isset($results[0])) $this->key_foreaneas = $results;
-
-    # ESTE IF ES IGUAL AL RETURN FINAL
-    // if (isset($results[0])){
-    //   return $results;
-    // } else {
-    //   return null;
-    // }
+    #if (isset($results[0])) $this->key_foreaneas = $results;
 
      return (isset($results[0])) ? $results : null;
   }
@@ -122,6 +115,19 @@ class Modelo
          );
     return (isset($informacion[0])) ? $informacion : null;
 
+  }
+
+  public function Buscador_personas($info)
+  {
+    $nombres = $info['Nombres'];
+    $apellidos = $info['Apellidos'];
+    $informacion = $this->wpdb->get_results(
+          "SELECT *
+          FROM `{$this->nombre_tabla}`
+          WHERE Nombres = '{$nombres}' AND Apellidos = '{$apellidos}'",
+           'ARRAY_A'
+         );
+    return (isset($informacion[0])) ? $informacion : null;
   }
 
 }
