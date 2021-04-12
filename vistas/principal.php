@@ -54,7 +54,7 @@
         <footer class="blockquote-footer">Estudiantes Activos <cite title="Source Title">Emmaus-pereira</cite></footer>
       </blockquote>
     </div>
-
+</div>
 
 
   <div class="iconos-activos">
