@@ -48,6 +48,17 @@ add_action('widgets_init', 'sidebar');
   wp_enqueue_script('theme_style_5');
   wp_register_script('theme_style_6', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), time(),true);
   wp_enqueue_script('theme_style_6');
+  wp_register_script('theme_script', '<script src="https://unpkg.com/feather-icons"></script>', array(), time(),true);
+  wp_enqueue_script('theme_script');
 
  }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
+
+//funcion que retorna la url del servidor hasta la carpeta emmauspag
+
+function urlemma($url){
+
+  $url = $url.'wp-content/themes/emmauspag';
+  return $url;
+
+}

@@ -1,8 +1,11 @@
 
-  <div class=" lateral d-grid gap-2 col-6 mx-auto">
+  <div class="principal  col-6 mx-auto">
+    <?php $url = urlemma($_SERVER['REQUEST_URI']);
 
+     ?>
+    <div class="lateral">
       <button class="btn btn-primary" type="button" name="button">
-        <a href="<?= site_url('/estudiantes'); ?>" class="class_a_href" >ESTUDIANTES</a>
+        <a href="<?=site_url('/estudiantes'); ?>" class="class_a_href" >ESTUDIANTES</a>
       </button>
 
       <button class="btn btn-primary"  type="button" name="button">
@@ -36,10 +39,26 @@
       <button class="btn btn-primary"  type="button" name="button">
         <a href="<?= site_url('/certificado'); ?>" class="class_a_href">CERTIFICADO</a>
       </button>
+    </div>
 
-  </div>
+    <div class="otro-lado text-center">
+      <blockquote class="blockquote text-center">
+        <img src="<?=$url?>/img/activos.png"
+         class="img-responsive img-rounded navbar-brand " width="150px" height="150px" >
+        <footer class="blockquote-footer">Estudiantes Activos <cite title="Source Title">Emmaus-pereira</cite></footer>
+      </blockquote>
+
+      <blockquote class="blockquote text-center">
+        <img src="<?=$url?>/img/activos.png"
+         class="img-responsive img-rounded navbar-brand " width="150px" height="150px" >
+        <footer class="blockquote-footer">Estudiantes Activos <cite title="Source Title">Emmaus-pereira</cite></footer>
+      </blockquote>
+    </div>
+
+
 
   <div class="iconos-activos">
-    
+
+
 
   </div>
