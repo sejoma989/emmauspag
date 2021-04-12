@@ -14,12 +14,11 @@
     $url =  trim($url,'/');
     $url = explode('/',$url);
 
-    print_r($_SERVER['REQUEST_URI']);
-    
+    //print_r($_SERVER['REQUEST_URI']);
+
 
     if ( array_search('estudiantes', $url) )
     {
-      echo "entre";
       require_once "vistas/visEstudiante.php";
     }  else if (array_search('usuarios', $url))
     {
