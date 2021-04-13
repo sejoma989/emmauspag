@@ -31,13 +31,20 @@
         <a href="<?= site_url('/inventario'); ?>" class="class_a_href">INVENTARIO</a>
       </button>
 
-
       <button class="btn btn-primary" type="button" name="button">
         <a href="<?= site_url('/imprimir'); ?>" class="class_a_href">IMPRIMIR</a>
       </button>
 
       <button class="btn btn-primary"  type="button" name="button">
         <a href="<?= site_url('/certificado'); ?>" class="class_a_href">CERTIFICADO</a>
+      </button>
+
+      <button class="btn btn-primary"  type="button" name="button">
+        <a href="<?= site_url('/diplomas'); ?>" class="class_a_href">DIPLOMAS Y ACTAS</a>
+      </button>
+
+      <button class="btn btn-primary"  type="button" name="button">
+        <a href="<?= site_url('/validar'); ?>" class="class_a_href">VALIDACION DE DIPLOMAS</a>
       </button>
     </div>
 

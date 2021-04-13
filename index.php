@@ -41,8 +41,13 @@
     }else if (array_search('certificado', $url))
     {
       require_once "vistas/certificado.php";
-    }else
+    }else if (array_search('diplomas', $url))
     {
+      require_once "vistas/diplomas.php";
+    }else if (array_search('validar', $url))
+    {
+      require_once "vistas/validacion.php";
+    }else{
       require_once "vistas/principal.php";
     }
 
