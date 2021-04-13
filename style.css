@@ -4,26 +4,62 @@ Author: Jandrey
 Description: Description.
 Version: 1.3
 */
-
- body {
-  background: #0CBBF3 !important;
+a.class_a_href{
+  cursor: default;
+  color: white;
 }
 
-.menu-emmaus {
+div.principal{
+  margin-left:  0px !important;
 
 }
 
+div.lateral{
+  display: inline-grid;
+  padding: 5%;
+  width: 50%;
+  position: relative;
 
-.menu-emmaus .contenedor-botones {
+}
+
+div.otro-lado{
+  display: inline-flex;
+  padding: 5%;
+  margin-top: 50px;
+  margin-left: 10px;
   width: 30%;
 }
 
-.menu-emmaus .boton-menu {
-  width: 100%;
-  border-radius: 6px;
+button.btn{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
+a.btn-crudd{
+  cursor: default;
+  color: white;
+}
 
+button.boton_para_volver{
+  margin-bottom: 5px;
+}
+
+blockquote.blockquote{
+  margin-top: 20%;
+  margin-left: 10% !important;
+}
+
+table.table{
+  margin-top: 20px;
+}
+
+div.crudd{
+  display: inline-flex;
+  margin: 20px;
+  width: 70%;
+  margin-left: 10px !important;
+}
 form{
 	width:50%;
 	padding:16px;
