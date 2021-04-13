@@ -50,8 +50,8 @@
     <a href="#buscar" class="btn-crudd btn-sucess" data-toggle="collapse">Actualizar Estudiante</a>
 
   </div>
-</div>
 </button>
+</div>
 
 <div id="ident" class="collapse">
   <form action="" class="form-inline" method="post">
