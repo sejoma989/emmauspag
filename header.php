@@ -11,10 +11,13 @@
 <?php wp_head(); ?>
 </head>
 <body>
-  <img src="<?php echo get_template_directory_uri()?>/img/logo.png" class="logo">
-
-<?php
-$url = site_url();
-#print_r($url);
-
-?>
+  <nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <div class="container-fluid text-center">
+          <img src="http://localhost/tercero/wordpress/wp-content/uploads/2021/03/LOGOSOLO.png"
+           class="img-responsive img-rounded navbar-brand " width="100" height="100" >
+           Escuela Biblica A Distancia
+    </a>
+  </div>
+</nav>
