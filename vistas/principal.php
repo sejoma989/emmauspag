@@ -46,6 +46,10 @@
       <button class="btn btn-primary"  type="button" name="button">
         <a href="<?= site_url('/validar'); ?>" class="class_a_href">VALIDACION DE DIPLOMAS</a>
       </button>
+
+      <button class="btn btn-primary"  type="button" name="button">
+        <a href="<?= site_url('/proveedores'); ?>" class="class_a_href">PROVEEDORES</a>
+      </button>
     </div>
 
     <div class="otro-lado text-center">
