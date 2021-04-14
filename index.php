@@ -47,6 +47,9 @@
     }else if (array_search('validar', $url))
     {
       require_once "vistas/validacion.php";
+    }else if (array_search('proveedores', $url))
+    {
+      require_once "vistas/proveedores.php";
     }else{
       require_once "vistas/principal.php";
     }
