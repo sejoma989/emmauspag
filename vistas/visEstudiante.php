@@ -87,8 +87,14 @@
                   <?php
                 }
       ?>
-    <input type="submit" value="Enviar"/>
+    <input href="#enviar-form"  type="submit" value="Enviar"/>
   </form>
+</div>
+
+<div id="enviar-form">
+  <?php
+        insertar_base_datos($_POST);
+    ?>
 </div>
 
 <div id="buscar" class="collapse">
