@@ -62,3 +62,26 @@ function urlemma($url){
   return $url;
 
 }
+
+function insertar_base_datos($datos){
+  $args = array();
+
+  if ( isset($datos) && isset($datos['tabla']) )
+  {
+    $modelo_general = new modelo($datos['tabla']);
+    $args['tabla'] = $datos['tabla'];
+    unset($datos['tabla']);
+
+    if ( $datos['selecionador'] == 1 )
+    {
+      unset($datos['selecionador']);
+    }
+    $args['datos'] = $datos;
+
+
+    if ($args['datos']['Nombres'] != '') {
+        $modelo_general->insertar_wpdb($args, $args['tabla']);
+    }
+
+  }
+}
