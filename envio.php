@@ -6,13 +6,9 @@ $modelo_estudiantes = new modelo('estudiantes');
 $modelo_promotores = new modelo('promotores');
 
 
-
-
-
-
 function buscar_datos()
 {
-  if (isset($_POST['Nombres']) ? $_POST['Nombres'] : null)
+  if (isset($_POST['boton'] ) == 'actualizar')
   {
 
     $information = $_POST ;
