@@ -2,12 +2,16 @@
   <div class="titulo text-center">
     <h1>ADMINISTRACIÓN DE ESTUDIANTES</h1>
   </div>
-  <form class="d-md-flex" method="post"  >
+  <form class="d-md-flex form-search-estudiantes" method="post"  >
         <input type="hidden" name="boton" value="buscador-nombre">
         <input type="hidden" name="Tabla" value="estudiantes">
         <input   class="form-control me-2" type="search" placeholder="DIGITE EL NOMBRE " aria-label="Search">
-        <input id="Fbuscar" class="btn btn-outline-success" type="submit" value="BUSCAR"/>
+        <!-- <input id="Fbuscar" class="btn btn-outline-success" type="submit" value="BUSCAR"/> -->
   </form>
+
+  <div class="contenedor-search">
+
+  </div>
 
   <table class="table" id="tabla-buscador">
   <thead>
@@ -28,6 +32,14 @@
       <td>5</td>
       <td>el hombre perfecto</td>
       <td>05/05/2020</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Flikimax</td>
+      <td>Dosquebradas</td>
+      <td>Todo bebe</td>
+      <td>Amado se yo mismo</td>
+      <td>01/12/2021</td>
     </tr>
   </tbody>
 </table>
@@ -111,32 +123,32 @@
       </form>
         <div id="respuesta"></div>
     <script>
-      $('#enviar').click(function (e){
-        e.preventDefault();
-        //var dato = document.getElementById('dato').value;
-        var ruta= $(this).serialize();
-        console.log(ruta)
-
-        $.ajax(
-          {
-            "url": 'wp-content/themes/emmauspag/bakend.php',
-            "method":'POST',
-            "data" : ruta
-
-        })
-        .done(function(res)
-        {
-          //muestro la respuesta del servidor
-          $('#respuesta').html(res)
-        })
-        .fail(function(){
-          console.log("error");
-        })
-        .always(function()
-        {
-          console.log("complete");
-        });
-      });
+      // jQuery('#enviar').click(function (e){
+      //   e.preventDefault();
+      //   //var dato = document.getElementById('dato').value;
+      //   var ruta= $(this).serialize();
+      //   console.log(ruta)
+      //
+      //   jQuery.ajax(
+      //     {
+      //       "url": 'wp-content/themes/emmauspag/bakend.php',
+      //       "method":'POST',
+      //       "data" : ruta
+      //
+      //   })
+      //   .done(function(res)
+      //   {
+      //     //muestro la respuesta del servidor
+      //     $('#respuesta').html(res)
+      //   })
+      //   .fail(function(){
+      //     console.log("error");
+      //   })
+      //   .always(function()
+      //   {
+      //     console.log("complete");
+      //   });
+      // });
     </script>
 
 </div>
