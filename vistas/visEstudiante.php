@@ -2,12 +2,14 @@
   <div class="titulo text-center">
     <h1>ADMINISTRACIÓN DE ESTUDIANTES</h1>
   </div>
-  <form class="d-md-flex">
-        <input class="form-control me-2" type="search" placeholder="DIGITE EL NOMBRE " aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+  <form class="d-md-flex" method="post"  >
+        <input type="hidden" name="boton" value="buscador-nombre">
+        <input type="hidden" name="Tabla" value="estudiantes">
+        <input   class="form-control me-2" type="search" placeholder="DIGITE EL NOMBRE " aria-label="Search">
+        <input id="Fbuscar" class="btn btn-outline-success" type="submit" value="BUSCAR"/>
   </form>
 
-  <table class="table">
+  <table class="table" id="tabla-buscador">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -56,9 +58,8 @@
 <div id="ident" class="collapse">
   <form action="" class="form-inline" method="post">
     <input type="hidden" name="tabla" value="estudiantes"/>
+    <input  type="hidden" name="boton" value="ingreso"/>
     <?php
-
-
     $primary_Key = $modelo_estudiantes->primary_key();
     $llaves_foranes = $modelo_estudiantes->get_key_foreaneas();
     $colum_name = $modelo_estudiantes->columnas_sin_llaves();
@@ -103,6 +104,7 @@
     ?>
       <form class="formulario_busqueda" method="post">
         <input  type="hidden" name="tabla" value="estudiantes"/>
+        <input  type="hidden" name="boton" value="actualizar"/>
         <input   type="text" name="Nombres"  placeholder="Digite los NOMBRES"/>
         <input   type="text" name="Apellidos"  placeholder="Digite los APELLIDOS"/>
         <input  id="Enviar" type="submit" value="consultar"/>

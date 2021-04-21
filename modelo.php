@@ -94,8 +94,6 @@ class Modelo
           FROM $referenced_table",
            'ARRAY_A'
          );
-
-
   //  echo "<pre>";
     //print_r( $results );
     //echo "</pre>";
@@ -124,10 +122,9 @@ class Modelo
     $informacion = $this->wpdb->get_results(
           "SELECT *
           FROM `{$this->nombre_tabla}`
-          WHERE Nombres = '{$nombres}' AND Apellidos = '{$apellidos}'",
+          WHERE Nombres LIKE '%{$nombres}%' AND Apellidos LIKE '%{$apellidos}%'",
            'ARRAY_A'
          );
     return (isset($informacion[0])) ? $informacion : null;
   }
-
 }
