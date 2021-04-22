@@ -72,9 +72,8 @@
     <input type="hidden" name="tabla" value="estudiantes"/>
     <input  type="hidden" name="boton" value="ingreso"/>
     <?php
-    $primary_Key = $modelo_estudiantes->primary_key();
-    $llaves_foranes = $modelo_estudiantes->get_key_foreaneas();
-    $colum_name = $modelo_estudiantes->columnas_sin_llaves();
+
+    
 
 
 
@@ -122,34 +121,7 @@
         <input  id="Enviar" type="submit" value="consultar"/>
       </form>
         <div id="respuesta"></div>
-    <script>
-      // jQuery('#enviar').click(function (e){
-      //   e.preventDefault();
-      //   //var dato = document.getElementById('dato').value;
-      //   var ruta= $(this).serialize();
-      //   console.log(ruta)
-      //
-      //   jQuery.ajax(
-      //     {
-      //       "url": 'wp-content/themes/emmauspag/bakend.php',
-      //       "method":'POST',
-      //       "data" : ruta
-      //
-      //   })
-      //   .done(function(res)
-      //   {
-      //     //muestro la respuesta del servidor
-      //     $('#respuesta').html(res)
-      //   })
-      //   .fail(function(){
-      //     console.log("error");
-      //   })
-      //   .always(function()
-      //   {
-      //     console.log("complete");
-      //   });
-      // });
-    </script>
+
 
 </div>
 
